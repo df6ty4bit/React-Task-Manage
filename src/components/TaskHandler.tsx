@@ -1,9 +1,8 @@
-import React from "react";
 import "./TaskHandler.css";
 import { useState } from "react";
 
 const TaskHandler = () => {
-    function handleSubmit(e) {
+    function handleSubmit(e: any) {
         e.preventDefault();
     }
     const [taskUpdater, setTaskUpdater] = useState("");
@@ -29,7 +28,7 @@ const TaskHandler = () => {
                 <h3>Added Task</h3>
                 <ul className="list">
                     <li>
-                        <label for="taskitem">
+                        <label htmlFor="taskitem">
                             <input
                                 type="checkbox"
                                 name="taskitem"
@@ -40,7 +39,7 @@ const TaskHandler = () => {
                         <button className="btn btn-danger">Delete</button>
                     </li>
                     <li>
-                        <label for="taskitem">
+                        <label htmlFor="taskitem">
                             <input
                                 type="checkbox"
                                 name="taskitem"
