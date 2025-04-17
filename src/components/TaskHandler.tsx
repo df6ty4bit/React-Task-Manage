@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const TaskHandler = () => {
     function addTask(){
-        
+
     }
     function handleSubmit(e: any) {
         e.preventDefault();
@@ -11,20 +11,19 @@ const TaskHandler = () => {
     const [taskUpdater, setTaskUpdater] = useState("");
     return (
         <>
-            <h1 className="header">Task Manager App</h1>
+            <h1>Task Manager App</h1>
             <form className="new-item-form">
                 <div className="form-row">
                     <input
                         placeholder="Enter New Task"
                         type="text"
-                        name="task"
+                        id="item"
                         value={taskUpdater}
                         onChange={e => {
                             setTaskUpdater(e.target.value);
                         }}
                     />
                     <button
-                        type="submit"
                         className="btn"
                         onClick={handleSubmit}
                     >
@@ -32,14 +31,14 @@ const TaskHandler = () => {
                     </button>
                 </div>
             </form>
-            <h3>Added Task</h3>
+            <h3 className="header">Added Task</h3>
             <ul className="list">
                 <li>
-                    <label htmlFor="taskitem">
+                    <label >
                         <input
                             type="checkbox"
                         
-                            className="input"
+                            
                         />
                         Item 1
                     </label>
@@ -48,11 +47,11 @@ const TaskHandler = () => {
                     </button>
                 </li>
                 <li>
-                    <label htmlFor="taskitem">
+                    <label >
                         <input
                             type="checkbox"
                            
-                            className="input"
+                            
                         />
                         Item 1
                     </label>
